@@ -1,6 +1,6 @@
 # WhoAmI
 
-A simple app for reminding you who Jesus says that you are, when you're following Him. Created using Svelt.
+A simple app for reminding you who Jesus says that you are, when you're following Him. Created using Svelte.
 
 ## Contribute
 
