@@ -270,9 +270,9 @@
 		</section>
 	{:else}
 		<section class="flex flex-col w-full overflow-hidden bg-white sm:mx-auto mb-auto">
-			<div class="flex justify-center p-8 bg-white lg:py-32 lg:px-16 lg:pl-10">
-				<div class="flex flex-col items-start justify-center w-full lg:max-w-lg">
-					<p class="py-5 mb-5 text-gray-600 text-4xl lg:text-6xl">
+			<div class="flex justify-center p-8 bg-white lg:py-16 lg:px-2 lg:pl-10">
+				<div class="flex flex-col items-start justify-center w-full lg:max-w-2xl">
+					<p class="py-5 mb-5 text-gray-600 text-3xl lg:text-6xl">
 						<span class="font-bold">{data[page].title}</span>
 					</p>
 					<p class="py-5 mb-5 text-gray-600 text-xl lg:text-2xl">
