@@ -213,9 +213,9 @@
 				'<a href="https://www.bible.com/bible/59/1PE.2.24" target="_blank">1 Peter 2:24</a>; <a href="https://www.bible.com/bible/59/ISA.53.6" target="_blank">Isaiah 53:6</a>'
 		},
 		32: {
-			title: 'I am being changed into his image.',
-			masculine: '{name} is being changed into his image.',
-			feminine: '{name} is being changed into her image.',
+			title: 'I am being changed into His image.',
+			masculine: '{name} is being changed into His image.',
+			feminine: '{name} is being changed into His image.',
 			verse:
 				'<a href="https://www.bible.com/bible/59/2CO.3.18" target="_blank">2 Corinthians 3:18</a>; <a href="https://www.bible.com/bible/59/PHP.1.6" target="_blank">Philippians 1:6</a>'
 		},
@@ -309,9 +309,9 @@
 			title:
 				'I possess the Great One in me because greater is He who is in me than he who is in the world.',
 			masculine:
-				'{name} possess the Great One in himself because greater is He who is in me than he who is in the world.',
+				'{name} possesses the Great One in himself because greater is He who is in me than he who is in the world.',
 			feminine:
-				'{name} possess the Great One in herself because greater is He who is in me than he who is in the world.',
+				'{name} possesses the Great One in herself because greater is He who is in me than he who is in the world.',
 			verse: '<a href="https://www.bible.com/bible/59/1JN.4.4" target="_blank">1 John 4:4</a>'
 		},
 		47: {
