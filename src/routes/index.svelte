@@ -158,9 +158,9 @@
 				'<a href="https://www.bible.com/bible/59/2CO.5.18" target="_blank">2 Corinthians 5:18</a>'
 		},
 		24: {
-			title: 'I am qualified to share in his inheritance.',
-			masculine: '{name} is qualified to share in his inheritance.',
-			feminine: '{name} is qualified to share in his inheritance.',
+			title: 'I am qualified to share in His inheritance.',
+			masculine: '{name} is qualified to share in His inheritance.',
+			feminine: '{name} is qualified to share in His inheritance.',
 			verse: '<a href="https://www.bible.com/bible/59/COL.1.12" target="_blank">Colossians 1:12</a>'
 		},
 		25: {
@@ -309,9 +309,9 @@
 			title:
 				'I possess the Great One in me because greater is He who is in me than he who is in the world.',
 			masculine:
-				'{name} possesses the Great One in himself because greater is He who is in me than he who is in the world.',
+				'{name} possesses the Great One in himself because greater is He who is in {name} than he who is in the world.',
 			feminine:
-				'{name} possesses the Great One in herself because greater is He who is in me than he who is in the world.',
+				'{name} possesses the Great One in herself because greater is He who is in {name} than he who is in the world.',
 			verse: '<a href="https://www.bible.com/bible/59/1JN.4.4" target="_blank">1 John 4:4</a>'
 		},
 		47: {
