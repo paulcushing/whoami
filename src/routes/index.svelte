@@ -353,9 +353,6 @@
 			personalize = JSON.parse(localStorage.getItem('personalize')) || false;
 			gender = localStorage.getItem('gender') || 'female';
 		}
-
-		console.log('personalize on mount: ', personalize);
-		console.log(typeof personalize);
 	});
 
 	function handleClickNext() {
@@ -411,7 +408,6 @@
 							role="switch"
 							id="enable-personalize"
 							bind:checked={personalize}
-							on:click={() => console.log(typeof personalize)}
 						/>
 						<label class="form-check-label inline-block text-gray-800" for="enable-personalize"
 							>Personalize</label
@@ -465,11 +461,7 @@
 				</div>
 			</div>
 			<div class="relative lg:w-1/2">
-				<img
-					src="https://images.pexels.com/photos/2258240/pexels-photo-2258240.jpeg?cs=srgb&dl=pexels-luis-quintero-2258240.jpg&fm=jpg"
-					alt="Hero"
-					class="object-cover w-full lg:absolute h-80 lg:h-full"
-				/>
+				<img src="/bible.jpg" alt="Hero" class="object-cover w-full lg:absolute h-80 lg:h-full" />
 			</div>
 		</section>
 		<footer class="py-10 bg-black">
