@@ -10,13 +10,19 @@
 		
 		%sveltekit.head%
 	</head>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PSS7MSK23"></script>
+	<!-- temporary redirect for previous url to new url -->
+	<script>
+		if (window.location.href == "https://whoami.paulcushing.dev") {
+			window.location.replace("https://whatgodsaysabout.me");
+		}
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-71SWRCRJZT"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
-	gtag('config', 'G-2PSS7MSK23');
+	gtag('config', 'G-71SWRCRJZT');
 	</script>
 	<body>
 		<div>%sveltekit.body%</div>
