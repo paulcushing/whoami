@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { loop_guard } from 'svelte/internal';
+	import ContactForm from '../components/ContactForm.svelte';
 
 	const data = {
 		0: {
@@ -472,10 +472,7 @@
 					</p>
 					<ul class="flex flex-row justify-center pb-3 -ml-4 -mr-4 text-sm">
 						<li>
-							<a
-								href="https://www.thepaulcushing.com/about/"
-								class="px-4 text-gray-500 hover:text-white">Contact</a
-							>
+							<ContactForm />
 						</li>
 					</ul>
 				</div>
