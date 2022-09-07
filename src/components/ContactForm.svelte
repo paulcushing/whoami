@@ -50,7 +50,7 @@
 				site: 'WhatGodSaysAbout.me'
 			};
 
-			return fetch('https://whoami.paulcushing.dev/contact/slack/send', {
+			return fetch('https://whatgodsaysabout.me/contact/slack/send', {
 				method: 'POST',
 				body: JSON.stringify(payload),
 				headers: {
