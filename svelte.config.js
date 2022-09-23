@@ -4,10 +4,9 @@ import preprocess from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			default: true
-		}
+		adapter: adapter({
+			fallback: 'index.html'
+		}),
 	},
 	preprocess: [
 		preprocess({
