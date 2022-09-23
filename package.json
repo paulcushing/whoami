@@ -29,6 +29,7 @@
 	"dependencies": {
 		"@sentry/svelte": "^7.13.0",
 		"@sentry/tracing": "^7.13.0",
-		"@sveltejs/adapter-static": "1.0.0-next.38"
+		"@sveltejs/adapter-static": "1.0.0-next.38",
+		"svelte-spa-router": "^3.3.0"
 	}
 }
