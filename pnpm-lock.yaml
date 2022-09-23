@@ -15,6 +15,7 @@ specifiers:
   prettier-plugin-svelte: ^2.7.0
   svelte: ^3.44.0
   svelte-preprocess: ^4.10.7
+  svelte-spa-router: ^3.3.0
   tailwindcss: ^3.1.6
   vite: ^3.1.0
 
@@ -22,6 +23,7 @@ dependencies:
   '@sentry/svelte': 7.13.0_svelte@3.49.0
   '@sentry/tracing': 7.13.0
   '@sveltejs/adapter-static': 1.0.0-next.38
+  svelte-spa-router: 3.3.0
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.80
@@ -1707,7 +1709,6 @@ packages:
   /regexparam/2.0.1:
     resolution: {integrity: sha512-zRgSaYemnNYxUv+/5SeoHI0eJIgTL/A2pUtXUPLHQxUldagouJ9p+K6IbIZ/JiQuCEv2E2B1O11SjVQy3aMCkw==}
     engines: {node: '>=8'}
-    dev: true
 
   /regexpp/3.2.0:
     resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
@@ -1961,6 +1962,12 @@ packages:
       strip-indent: 3.0.0
       svelte: 3.49.0
     dev: true
+
+  /svelte-spa-router/3.3.0:
+    resolution: {integrity: sha512-cwRNe7cxD43sCvSfEeaKiNZg3FCizGxeMcf7CPiWRP3jKXjEma3vxyyuDtPOam6nWbVxl9TNM3hlE/i87ZlqcQ==}
+    dependencies:
+      regexparam: 2.0.1
+    dev: false
 
   /svelte/3.49.0:
     resolution: {integrity: sha512-+lmjic1pApJWDfPCpUUTc1m8azDqYCG1JN9YEngrx/hUyIcFJo6VZhj0A1Ai0wqoHcEIuQy+e9tk+4uDgdtsFA==}
