@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import ContactForm from '../components/ContactForm.svelte';
 	import { data } from '../components/Data.svelte';
-	import { location } from 'svelte-spa-router';
 	import { PUBLIC_MIXPANEL_TOKEN } from '$env/static/public';
 
 	/* Mixpanel */
@@ -15,7 +14,6 @@
 	let gender;
 
 	onMount(async () => {
-		//console.log(data);
 		if (typeof localStorage !== 'undefined') {
 			name = localStorage.getItem('name') || 'Guest';
 			personalize = JSON.parse(localStorage.getItem('personalize')) || false;
@@ -23,12 +21,9 @@
 		}
 
 		if (typeof window !== 'undefined') {
-			if ($location && $location !== '/') {
-				let incomingPageNum = $location.substring(1);
-				page = incomingPageNum;
-			} else {
-				page = 0;
-			}
+			let newPageNumber = window.location.hash.substring(2);
+
+			page = newPageNumber ? newPageNumber : 0;
 		}
 
 		mixpanel.track('Viewed Page', {
@@ -97,7 +92,7 @@
 
 	if (typeof window !== 'undefined') {
 		window.addEventListener('hashchange', function () {
-			page = $location.substring(1) || 0;
+			page = window.location.hash.substring(2) || 0;
 		});
 	}
 </script>
