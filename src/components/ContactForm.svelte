@@ -123,7 +123,7 @@
 													name="contact-name"
 													id="contact-name"
 													autocomplete="name"
-													class="p-2 mt-1 block w-full rounded-md border border-4 border-red-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+													class="p-2 mt-1 block w-full rounded-md border-4 border-red-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 												/>
 											{:else}
 												<input
@@ -147,7 +147,7 @@
 													name="email-address"
 													id="email-address"
 													autocomplete="email"
-													class="p-2 mt-1 block w-full rounded-md border border-4 border-red-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+													class="p-2 mt-1 block w-full rounded-md border-4 border-red-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 												/>
 											{:else}
 												<input
@@ -170,7 +170,7 @@
 													type="text"
 													name="message"
 													id="message"
-													class="p-2 mt-1 block w-full rounded-md border border-4 border-red-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+													class="p-2 mt-1 block w-full rounded-md border-4 border-red-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 												/>
 											{:else}
 												<textarea
