@@ -2,7 +2,12 @@
 	import { onMount } from 'svelte';
 	import ContactForm from '../components/ContactForm.svelte';
 	import { data } from '../components/Data.svelte';
-	import { push, pop, replace, location } from 'svelte-spa-router';
+	import { location } from 'svelte-spa-router';
+	import { PUBLIC_MIXPANEL_TOKEN } from '$env/static/public';
+
+	/* Mixpanel */
+	import mixpanel from 'mixpanel-browser';
+	mixpanel.init(PUBLIC_MIXPANEL_TOKEN, { debug: true });
 
 	let page = 0;
 	let personalize;
@@ -17,14 +22,21 @@
 			gender = localStorage.getItem('gender') || 'female';
 		}
 
-		if (typeof window !== 'undefined' && $location && $location !== '/') {
-			let incomingPageNum = $location.substring(1);
-
-			page = incomingPageNum;
+		if (typeof window !== 'undefined') {
+			if ($location && $location !== '/') {
+				let incomingPageNum = $location.substring(1);
+				page = incomingPageNum;
+			} else {
+				page = 0;
+			}
 		}
+
+		mixpanel.track('Viewed Page', {
+			Page: 'Home'
+		});
 	});
 
-	function handleClickNext() {
+	function handleClickStart() {
 		if (name !== localStorage.getItem('name')) {
 			localStorage.setItem('name', name);
 		}
@@ -35,9 +47,26 @@
 			localStorage.setItem('gender', gender);
 		}
 
+		mixpanel.track('Clicked Start', {
+			Personalized: personalize,
+			'Page Number': 1
+		});
+
+		page = 1;
+
+		let url = '#/1';
+
+		history.pushState('', '', url);
+	}
+
+	function handleClickNext() {
 		page++;
 
 		let url = '#/' + page;
+
+		mixpanel.track('Clicked Forward', {
+			'Page Number': page
+		});
 
 		history.pushState('', '', url);
 	}
@@ -45,7 +74,11 @@
 	function handleClickPrev() {
 		page--;
 
-		let url = '#/' + page;
+		let url = page == '0' ? '/' : '#/' + page;
+
+		mixpanel.track('Clicked Back', {
+			'Page Number': page
+		});
 
 		history.pushState('', '', url);
 	}
@@ -55,21 +88,22 @@
 
 		let url = '/';
 
+		mixpanel.track('Clicked Home', {
+			'Page Number': page
+		});
+
 		history.pushState('', '', url);
 	}
 
 	if (typeof window !== 'undefined') {
 		window.addEventListener('hashchange', function () {
-			let incomingPageNum = $location.substring(1);
-
-			page = incomingPageNum;
+			page = $location.substring(1) || 0;
 		});
 	}
 </script>
 
 <svelte:head>
 	<title>Who Am I - Who Does Jesus Say That I Am?</title>
-	<html lang="en" />
 </svelte:head>
 
 {#if page === 0}
@@ -92,7 +126,7 @@
 					</p>
 					<div class="form-check form-switch">
 						<input
-							class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+							class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
 							type="checkbox"
 							role="switch"
 							id="enable-personalize"
@@ -107,39 +141,20 @@
 						<input
 							id="name"
 							type="text"
-							class="p-2 rounded-lg border-2 border-slate-400 w-full max-w-xs mb-2"
 							placeholder={name}
+							class="input input-bordered input-secondary w-full max-w-xs mb-2"
 							bind:value={name}
 						/>
 
-						<select
-							bind:value={gender}
-							class="form-select form-select-sm
-							max-w-xs
-							appearance-none
-							block
-							w-full
-							px-2
-							py-1
-							text-sm
-							font-normal
-							text-gray-700
-							bg-white bg-clip-padding bg-no-repeat
-							border border-solid border-gray-300
-							rounded
-							transition
-							ease-in-out
-							m-0
-							focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-							aria-label=".form-select-sm example"
-						>
+						<select class="select select-primary w-full max-w-xs" bind:value={gender}>
+							<option disabled selected>Select Gender</option>
 							<option value="male">Male</option>
 							<option value="female">Female</option>
 						</select>
 					{/if}
 					<div class="flex items-center mt-2">
 						<button
-							on:click={handleClickNext}
+							on:click={handleClickStart}
 							class="touch-pan-y inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none"
 							data-rounded="rounded-lg"
 							data-primary="gray-900"
@@ -149,11 +164,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="relative lg:w-1/2">
+			<div class="lg:w-1/2">
 				<img src="/bible.jpg" alt="Hero" class="object-cover w-full lg:absolute h-80 lg:h-full" />
 			</div>
 		</section>
-		<footer class="py-10 bg-black">
+		<footer class="py-10 bg-black z-10">
 			<div class="px-10 mx-auto max-w-7xl">
 				<div class="flex flex-col justify-between text-center md:flex-row">
 					<p class="order-last text-sm leading-tight text-gray-500 md:order-first">

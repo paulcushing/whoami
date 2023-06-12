@@ -6,7 +6,6 @@
 		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
@@ -14,22 +13,24 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.4.7",
+		"daisyui": "^3.1.0",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"postcss": "^8.4.14",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
-		"svelte": "^3.44.0",
+		"svelte": "3.59.1",
 		"svelte-preprocess": "^4.10.7",
-		"tailwindcss": "^3.1.6",
-		"vite": "^3.1.0"
+		"tailwindcss": "3.2.2",
+		"vite": "4.3.9"
 	},
 	"type": "module",
 	"dependencies": {
 		"@sentry/svelte": "^7.13.0",
 		"@sentry/tracing": "^7.13.0",
 		"@sveltejs/adapter-static": "1.0.0-next.38",
+		"mixpanel-browser": "^2.47.0",
 		"svelte-spa-router": "^3.3.0"
 	}
 }
