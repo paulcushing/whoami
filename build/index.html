@@ -6,13 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 		
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/_app/immutable/start-30d38b3d.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index-48cb2043.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/singletons-ff0de012.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index-555949fa.js">
+		
+		<link rel="modulepreload" href="/_app/immutable/entry/start.d44e1dce.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.5825bd52.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.99883d86.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.822a9f57.js">
 	</head>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-71SWRCRJZT"></script>
 	<script>
@@ -24,17 +23,23 @@
 	</script>
 	<body>
 		<div>
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "/_app/immutable/start-30d38b3d.js";
+			<script>
+				{
+					__sveltekit_bpk5iv = {
+						base: "",
+						env: {"PUBLIC_MIXPANEL_TOKEN":"13fa757db756e64f3502df1c607cff67"}
+					};
 
-			start({
-				env: {},
-				hydrate: null,
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				trailing_slash: "never"
-			});
-		</script></div>
-		<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.d44e1dce.js"),
+						import("/_app/immutable/entry/app.822a9f57.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>
