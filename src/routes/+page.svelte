@@ -15,9 +15,9 @@
 			gender = localStorage.getItem('gender') || 'female';
 		}
 
-		// mixpanel.track('Viewed Page', {
-		// 	Page: 'Home'
-		// });
+		mixpanel.track('Viewed Page', {
+			Page: 'Home'
+		});
 	});
 
 	function handleClickStart() {
@@ -98,11 +98,6 @@
 			class="h-80 lg:h-screen lg:scale-105 lg:w-1/2 overflow-hidden bg-[url('/bible.jpg')] bg-center bg-no-repeat bg-cover"
 		>
 			<p>&nbsp;</p>
-			<!-- <img
-				src="/bible.jpg"
-				alt="Hero"
-				class="object-cover object-center w-full lg:absolute h-80 lg:h-full"
-			/> -->
 		</div>
 	</section>
 	<footer class="py-10 bg-black z-10">

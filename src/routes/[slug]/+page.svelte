@@ -18,7 +18,10 @@
 		}
 
 		mixpanel.track('Viewed Page', {
-			Page: data.slug
+			Page: data.slug,
+			Name: name,
+			Personalize: personalize,
+			Gender: gender
 		});
 	});
 

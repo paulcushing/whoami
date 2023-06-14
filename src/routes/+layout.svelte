@@ -6,8 +6,8 @@
 	import { PUBLIC_MIXPANEL_TOKEN } from '$env/static/public';
 
 	/* Mixpanel */
-	//import mixpanel from 'mixpanel-browser';
-	//mixpanel.init(PUBLIC_MIXPANEL_TOKEN, { debug: true });
+	import mixpanel from 'mixpanel-browser';
+	mixpanel.init(PUBLIC_MIXPANEL_TOKEN, { debug: false });
 
 	// Initialize the Sentry SDK here
 	Sentry.init({
