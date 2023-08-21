@@ -29,9 +29,9 @@
 	const { neutral, masculine, feminine, verse } = promiseData[data.slug];
 
 	const homePage = '/';
-	const prevPage = data.slug === '1' ? '/' : '/' + (parseInt(data.slug) - 1).toString();
+	const prevPage = data.slug === '1' ? '/' : '/' + (parseInt(data.slug) - 1).toString() + '.html';
 
-	const nextPage = '/' + (parseInt(data.slug) + 1).toString();
+	const nextPage = '/' + (parseInt(data.slug) + 1).toString() + '.html';
 </script>
 
 <svelte:head>

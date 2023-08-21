@@ -31,7 +31,7 @@
 			localStorage.setItem('gender', gender);
 		}
 
-		goto('/1');
+		goto('/1.html');
 	}
 </script>
 
