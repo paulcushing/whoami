@@ -11,6 +11,7 @@
 	export let data;
 
 	onMount(async () => {
+		console.log('Loading page: ' + data.slug);
 		if (typeof localStorage !== 'undefined') {
 			name = localStorage.getItem('name') || 'Guest';
 			personalize = JSON.parse(localStorage.getItem('personalize')) || false;
