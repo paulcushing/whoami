@@ -25,6 +25,11 @@
 			Gender: gender
 		});
 
+		const shareData = {
+			title: 'What God Says About Me',
+			text: 'A reminder of who God says you are.',
+			url: 'https://whatgodsaysabout.me/' + data.slug + '.html'
+		}
 		if (navigator.share && navigator.canShare(shareData)) {
 			canShare = true;
 		} else {
