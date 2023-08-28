@@ -28,6 +28,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sentry/svelte": "^7.13.0",
+		"@sentry/sveltekit": "^7.65.0",
 		"@sentry/tracing": "^7.13.0",
 		"@sveltejs/adapter-static": "2.0.2",
 		"mixpanel-browser": "^2.47.0",
