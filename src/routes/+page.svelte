@@ -37,6 +37,7 @@
 
 <svelte:head>
 	<title>Who Am I - Who Does Jesus Say That I Am?</title>
+	<meta name="description" content="A reminder of what Jesus about us, along with links to the scriptures that go with them.">
 </svelte:head>
 
 <div class="flex flex-col w-screen min-h-screen m-0 p-0 justify-between">
