@@ -55,6 +55,10 @@
 			await navigator.share(shareData)
 			console.log('Shared successfully')
 		} catch(err) {
+			if (err.toString().includes('AbortError')) {
+				console.log('Share cancelled');
+				return true;
+			}
 			console.log('Share error: ' + err)
 		}
 	}
