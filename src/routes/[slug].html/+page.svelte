@@ -44,7 +44,7 @@
 
 	const nextPage = '/' + (parseInt(data.slug) + 1).toString() + '.html';
 
-	function shareThis() {
+	async function shareThis() {
 		const shareData = {
 			title: 'What God Says About Me',
 			text: 'A reminder of who God says you are.',
@@ -52,7 +52,7 @@
 		}
 
 		try {
-			navigator.share(shareData)
+			await navigator.share(shareData)
 			console.log('Shared successfully')
 		} catch(err) {
 			console.log('Share error: ' + err)
