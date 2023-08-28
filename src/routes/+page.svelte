@@ -106,6 +106,12 @@
 			<div class="flex flex-col justify-between text-center md:flex-row">
 				<p class="order-last text-sm leading-tight text-gray-500 md:order-first">
 					Built for God's glory and YOUR joy!
+					<button class=""
+					on:click={() => {
+						throw new Error("Sentry Frontend Test");
+					}}>
+						!
+					</button>
 				</p>
 				<ul class="flex flex-row justify-center pb-3 -ml-4 -mr-4 text-sm">
 					<li>
