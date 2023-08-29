@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-	<title>Who Am I - Who Does Jesus Say That I Am?</title>
+	<title>Who Am I - WhatGodSaysAbout.me</title>
 	<meta name="description" content="A reminder of what Jesus about us, along with links to the scriptures that go with them.">
 </svelte:head>
 
