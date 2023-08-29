@@ -65,7 +65,7 @@
 </script>
 
 <svelte:head>
-	<title>Who Am I - Who Does Jesus Say That I Am?</title>
+	<title>Who Am I - WhatGodSaysAbout.me</title>
 	<meta name="description" content={neutral.substring(0,160)}>
 </svelte:head>
 
