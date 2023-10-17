@@ -37,7 +37,10 @@
 
 <svelte:head>
 	<title>Who Am I - WhatGodSaysAbout.me</title>
-	<meta name="description" content="A reminder of what Jesus about us, along with links to the scriptures that go with them.">
+	<meta
+		name="description"
+		content="A reminder of what Jesus about us, along with links to the scriptures that go with them."
+	/>
 </svelte:head>
 
 <div class="flex flex-col w-screen min-h-screen m-0 p-0 justify-between">
@@ -106,10 +109,12 @@
 			<div class="flex flex-col justify-between text-center md:flex-row">
 				<p class="order-last text-sm leading-tight text-gray-500 md:order-first">
 					Built for God's glory and YOUR joy!
-					<button class=""
-					on:click={() => {
-						throw new Error("Sentry Frontend Test");
-					}}>
+					<button
+						class=""
+						on:click={() => {
+							throw new Error('Sentry Frontend Test');
+						}}
+					>
 						!
 					</button>
 				</p>

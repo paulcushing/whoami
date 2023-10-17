@@ -6,10 +6,10 @@ const config = {
 	kit: {
 		adapter: adapter({
 			pages: 'build',
-            assets: 'build',
+			assets: 'build',
 			fallback: 'index.html',
-            precompress: false,
-            strict: true
+			precompress: false,
+			strict: true
 		}),
 		prerender: {
 			// use relative URLs similar to an anchor tag <a href="/test/1"></a>
