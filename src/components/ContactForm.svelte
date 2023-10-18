@@ -80,7 +80,7 @@
 <button
 	on:click={showContact}
 	href="https://www.thepaulcushing.com/about/"
-	class="px-4 text-gray-500 hover:text-white">Contact</button
+	class="px-4 text-gray-400 hover:text-white">Contact</button
 >
 
 {#if showModal}

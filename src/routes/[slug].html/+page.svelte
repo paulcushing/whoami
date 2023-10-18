@@ -109,7 +109,7 @@
 				<div class="flex w-full justify-between">
 					<a
 						href={prevPage}
-						aria-label="Previous Page"
+						aria-label="Back"
 						class="touch-pan-y inline-flex items-center justify-center h-12 px-6 mr-2 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none"
 					>
 						Back
@@ -127,7 +127,7 @@
 							class="touch-pan-y inline-flex items-center justify-center h-12 px-6 ml-2 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none"
 							data-rounded="rounded-lg"
 							data-primary="gray-900"
-							aria-label="Next Page"
+							aria-label="Next"
 						>
 							Next
 						</a>
