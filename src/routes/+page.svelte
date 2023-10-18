@@ -88,7 +88,7 @@
 						<option value="female">Female</option>
 					</select>
 				{/if}
-				<div class="flex items-center mt-2">
+				<div class="flex items-center mt-6">
 					<button
 						on:click={handleClickStart}
 						class="touch-pan-y inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-900 focus:shadow-outline focus:outline-none"
@@ -109,14 +109,6 @@
 			<div class="flex flex-col justify-between text-center md:flex-row">
 				<p class="order-last text-sm leading-tight text-gray-400 md:order-first">
 					Built for God's glory and YOUR joy!
-					<button
-						class=""
-						on:click={() => {
-							throw new Error('Sentry Frontend Test');
-						}}
-					>
-						!
-					</button>
 				</p>
 				<ul class="flex flex-row justify-center pb-3 -ml-4 -mr-4 text-sm">
 					<li>
