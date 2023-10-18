@@ -107,7 +107,7 @@
 	<footer class="py-10 bg-black z-10">
 		<div class="px-10 mx-auto max-w-7xl">
 			<div class="flex flex-col justify-between text-center md:flex-row">
-				<p class="order-last text-sm leading-tight text-gray-500 md:order-first">
+				<p class="order-last text-sm leading-tight text-gray-400 md:order-first">
 					Built for God's glory and YOUR joy!
 					<button
 						class=""
