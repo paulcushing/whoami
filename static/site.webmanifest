@@ -1,6 +1,8 @@
 {
+	"id": "whatgodsaysaboutme",
 	"name": "WhatGodSaysAbout.me",
 	"start_url": "https://whatgodsaysabout.me",
+	"description": "An encouraging reminder of what God says about each of us.",
 	"short_name": "God Says",
 	"icons": [
 		{
@@ -16,5 +18,9 @@
 	],
 	"theme_color": "#ffffff",
 	"background_color": "#ffffff",
-	"display": "standalone"
+	"display": "standalone",
+	"orientation": "portrait",
+	"dir": "ltr",
+	"lang": "en-US",
+	"scope": "https://whatgodsaysabout.me/"
 }
